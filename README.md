@@ -1,8 +1,6 @@
-# P7
-http://englishonlineclub.com/pdf/Cracking%20the%20Coding%20Interview%20-%20189%20Programming%20Questions%20and%20Solutions%20(6th%20Edition)%20[EnglishOnlineClub.com].pdf
+# Projet 7 Openclassrooms Python
 
-knapsac algo 
-itertools combination
-
-
- 
+Aucune installation nécessaire.
+Il suffit d'exécuter les fichiers optimized.py ou bruteforce.py.
+Vous pouvez changer la précision de l'algo optimisé en changeant le paramètre factor
+dans les lignes 105 et 107 de optimized.py. Plus le facteur est haut, plus c'est préçis et prendra du temps.
