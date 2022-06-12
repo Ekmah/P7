@@ -46,6 +46,13 @@ def knap_sack(funds, actions, n):  # O(n*m)
     #     print(think)
     return k[n][funds], k
 
+# pour chaques actions: compare avec l'évaluation de l'action précédent,
+# le profit maximum pour ce prix là.
+# Si prix plus grand que monnaie: alors prix précédent est enregistré
+# Si profit précédent est plus haut alors il est gardé.
+# Sinon. Profit d'action actuel + profit gagné avec fonds restants
+# (k_n[int(w - price)) est gardé
+
 
 def items(i, j, k, actions, factor):  # O(n)
     global total_price
@@ -63,7 +70,7 @@ def items(i, j, k, actions, factor):  # O(n)
         return items(i-1, j, k, actions, factor)
 
 
-def algo_optimized(factor, csv_file_name=False, csv_is=True):  # O(n)
+def algo_optimized(factor=1, csv_file_name=False, csv_is=True):  # O(n)
     global total_price
     total_price = 0
     if csv_is:
@@ -97,6 +104,6 @@ def algo_optimized(factor, csv_file_name=False, csv_is=True):  # O(n)
 total_price = 0
 algo_optimized(factor=100, csv_file_name='dataset1_Python+P7.csv')
 # best_profit = 198.x ?
-# algo_optimized(factor=100, csv_file_name='dataset2_Python+P7.csv')
-# # best_profit = ?
-# algo_optimized(factor=1, csv_is=False)
+algo_optimized(factor=100, csv_file_name='dataset2_Python+P7.csv')
+# best_profit = ?
+algo_optimized(csv_is=False)
