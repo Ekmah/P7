@@ -46,7 +46,6 @@ while i <= len(actions):
                 combine_dict = {'name': combination_name,
                                 'total_price': total_price,
                                 'total_profit': total_profit}
-                # print(combine_dict)
                 valid_combinations.append(combine_dict)
     i += 1
 print(type(valid_combinations), len(valid_combinations))

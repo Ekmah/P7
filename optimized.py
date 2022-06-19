@@ -25,7 +25,6 @@ actions_lite = [{"name": "Action-01", "price": 20, "profit": 5},
                 ]
 
 
-#  O(n*m)
 def knap_sack(funds, actions, n):  # O(n*m)
     k = [[0 for column in range(funds + 1)] for row in range(n + 1)]
     for i in range(n + 1):
@@ -42,8 +41,6 @@ def knap_sack(funds, actions, n):  # O(n*m)
                               k_n[w])
             else:
                 k[i][w] = k_n[w]
-    # for think in K:
-    #     print(think)
     return k[n][funds], k
 
 # pour chaques actions: compare avec l'évaluation de l'action précédent,
@@ -54,7 +51,7 @@ def knap_sack(funds, actions, n):  # O(n*m)
 # (k_n[int(w - price)) est gardé
 
 
-def items(i, j, k, actions, factor):  # O(n)
+def items(i, j, k, actions, factor):
     global total_price
     if i == 0:
         return total_price
@@ -83,7 +80,6 @@ def algo_optimized(factor=1, csv_file_name=False, csv_is=True):  # O(n)
                         row["profit"] = float(row["profit"]) * factor
                         row["price"] = float(row["price"]) * factor
                         actions.append(row)
-            # print(actions[530: 540])
         funds = 500*factor
     else:
         actions = actions_lite
@@ -103,7 +99,5 @@ def algo_optimized(factor=1, csv_file_name=False, csv_is=True):  # O(n)
 
 total_price = 0
 algo_optimized(factor=100, csv_file_name='dataset1_Python+P7.csv')
-# best_profit = 198.x ?
 algo_optimized(factor=100, csv_file_name='dataset2_Python+P7.csv')
-# best_profit = ?
 algo_optimized(csv_is=False)
