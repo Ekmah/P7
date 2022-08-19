@@ -53,7 +53,9 @@ for thing in sorted(valid_combinations, key=lambda d: d['total_profit'],
                     reverse=True)[0:10]:
     print(thing)
 
-bruteforce_solution = {'name': 'Action-04_Action-05_Action-06_Action-08_'
-                               'Action-10_Action-11_Action-13_Action-18_'
-                               'Action-19_Action-20_',
-                       'total_price': 498, 'total_profit': 99.08000000000001}
+
+# solution of bruteforce algorithm so that re-execution is unneeded:
+# bruteforce_solution = {'name': 'Action-04_Action-05_Action-06_Action-08_'
+#                                'Action-10_Action-11_Action-13_Action-18_'
+#                                'Action-19_Action-20_',
+#                        'total_price': 498, 'total_profit': 99.08000000000001}
